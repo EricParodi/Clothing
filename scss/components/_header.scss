@@ -1,0 +1,51 @@
+ul {
+  list-style: none;
+}
+
+header {
+  background-color: $background-color;
+
+  nav {
+    @include flex(flex, space-between, center);
+    height: 150px;
+
+    > a {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      transition: transform 0.3s ease; 
+
+      img {
+        margin-left: 100px;
+        height: 150px;
+        transition: transform 0.3s ease; 
+      }
+
+      &:hover {
+        transform: scale(1.05);
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    ul {
+      @include flex(flex, center, center);
+
+      li {
+        margin-right: 100px;
+
+        a {
+          font-size: 20px;
+          text-decoration: none;
+          color: rgb(0, 0, 0);
+          transition: border-bottom 0.3s ease; 
+
+          &:active, &:hover {
+            border-bottom: 5px solid black;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+/* FOOTER */
+.footer {
+  background-color: $background-color;
+  @include flex(flex, space-between, center);
+  padding: 20px;
+  flex-wrap: wrap;
+
+  .footer-img img {
+    height: 100px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    &:hover{
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      transform: scale(1.1);
+    }
+  }
+
+  .social-icons {
+    @include flex(flex, center, flex-end);
+    margin-left: auto;
+
+    a {
+      margin-right: 10px;
+
+      img {
+        height: 90px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      &:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  h4 {
+    color: $text-color;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,13 @@
+$primary-color: #748cab;
+$secondary-color: #3e5c76;
+$background-color: #f0ebd8;
+$text-color: #fff;
+$link-color: #0d1321;
+
+
+/*mixin*/
+@mixin flex($flex, $justify, $align){
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+}
