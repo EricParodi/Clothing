@@ -1,13 +1,4 @@
 /*hero section*/
-.hero-section {
-  @include flex(flex, center, center);
-  background-image: url(../img/hero-img.png);
-  height: 400px;
-  text-align: center;
-  font-size: 50px;
-  font-family: 'Playfair Display', serif;
-  color: #000000;
-}
 
 /* Section Ofertas */
 .ofertas {
