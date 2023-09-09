@@ -21,6 +21,7 @@ header {
       justify-content: flex-start;
       transition: transform 0.3s ease; }
       header nav > a img {
+        margin-bottom: 20px;
         margin-left: 100px;
         height: 100px;
         transition: transform 0.3s ease; }
@@ -347,35 +348,39 @@ header {
 
 /* MEDIA QUERIES */
 @media (max-width: 975px) {
-  header nav {
+  header .nav-bar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     height: auto; }
-    header nav nav > a img {
-      margin-left: 20px;
-      height: 100px; }
-    header nav ul {
-      margin-top: 20px; }
-      header nav ul li {
-        margin-bottom: 10px; }
+  header .nav-bar a img {
+    margin-left: 0;
+    margin-bottom: 20px;
+    height: 100px; }
+  header .nav-bar ul {
+    margin-top: 20px;
+    text-align: center;
+    padding: 0; }
+  header .nav-bar ul li {
+    margin-right: 15px;
+    margin-bottom: 10px; }
+  header .nav-bar ul li a {
+    font-size: 15px; }
   .hero-section h1 {
-    font-size: 60px; }
-  .hero-section h2 {
     font-size: 40px; }
-  .ofertas, .mas-vendido {
-    height: 1000px; } }
+  .hero-section h2 {
+    font-size: 28px; }
+  .ofertas,
+  .mas-vendido {
+    height: auto; } }
 
 @media (max-width: 690px) {
-  header nav ul {
-    padding: 0; }
-    header nav ul li a {
-      font-size: 18px; }
-    header nav ul ul {
-      flex-direction: column; } }
+  header .nav-bar ul {
+    text-align: center; } }
 
 @media (max-width: 655px) {
-  .ofertas, .mas-vendido {
-    height: 1500px; } }
+  .ofertas,
+  .mas-vendido {
+    height: auto; } }
 
 /* CATALOGO MASCULINO Y FEMENINO MEDIA QUERIES */
 @media (max-width: 975px) {
@@ -394,3 +399,29 @@ header {
   .boton-compra {
     font-size: 14px;
     padding: 5px 10px; } }
+
+/*contactanos mediaquery */
+@media screen and (max-width: 768px) {
+  .contenedor-contactanos {
+    padding: 10px;
+    height: 1000px; }
+    .contenedor-contactanos h1 {
+      font-size: 20px; }
+    .contenedor-contactanos .contacto {
+      flex-direction: column; }
+      .contenedor-contactanos .contacto .contacto-izq,
+      .contenedor-contactanos .contacto .contacto-der {
+        flex: none;
+        width: 100%; } }
+
+/*footer*/
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 10px; }
+    .footer .footer-img img {
+      height: 100px; }
+    .footer .social-icons img {
+      height: 60px;
+      margin: 5px; }
+    .footer h4 {
+      font-size: 14px; } }

@@ -1,55 +1,62 @@
 /* MEDIA QUERIES */
 
 @media (max-width: 975px) {
-    header nav {
-      flex-direction: column;
-      align-items: flex-start;
-      height: auto;
-  
-      nav > a img {
-        margin-left: 20px;
-        height: 100px;
-      }
-  
-      ul {
-        margin-top: 20px;
-        li {
-          margin-bottom: 10px;
-        }
-      }
-    }
-  
-    .hero-section {
-      h1 {
-        font-size: 60px;
-      }
-      h2 {
-        font-size: 40px;
-      }
-    }
-  
-    .ofertas, .mas-vendido {
-      height: 1000px;
-    }
+  header .nav-bar {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
   }
-  
-  @media (max-width: 690px) {
-    header nav ul {
-      padding: 0;
-      li a {
-        font-size: 18px;
-      }
-      ul {
-        flex-direction: column;
-      }
-    }
+
+  header .nav-bar a img {
+    margin-left: 0;
+    margin-bottom: 20px;
+    height: 100px;
   }
-  
-  @media (max-width: 655px) {
-    .ofertas, .mas-vendido {
-      height: 1500px;
-    }
+
+  header .nav-bar ul {
+    margin-top: 20px;
+    text-align: center;
+    padding: 0;
   }
+
+  header .nav-bar ul li {
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+
+  header .nav-bar ul li a{
+    font-size: 15px;
+  }
+
+  .hero-section h1 {
+    font-size: 40px;
+  }
+
+  .hero-section h2 {
+    font-size: 28px;
+  }
+
+  .ofertas,
+  .mas-vendido {
+    height: auto;
+  }
+}
+
+
+@media (max-width: 690px) {
+ 
+  header .nav-bar ul {
+    text-align: center;
+  }
+}
+
+@media (max-width: 655px) {
+  .ofertas,
+  .mas-vendido {
+    height: auto;
+  }
+}
+
   
   /* CATALOGO MASCULINO Y FEMENINO MEDIA QUERIES */
   
@@ -79,3 +86,46 @@
       padding: 5px 10px;
     }
   }
+
+/*contactanos mediaquery */
+
+@media screen and (max-width: 768px) {
+  .contenedor-contactanos {
+    padding: 10px;
+    height: 1000px;
+
+    h1 {
+      font-size: 20px;
+    }
+
+    .contacto {
+      flex-direction: column;
+
+      .contacto-izq,
+      .contacto-der {
+        flex: none;
+        width: 100%;
+      }
+    }
+  }
+}
+
+/*footer*/
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 10px;
+
+    .footer-img img {
+      height: 100px;
+    }
+
+    .social-icons img {
+      height: 60px;
+      margin: 5px;
+    }
+
+    h4 {
+      font-size: 14px;
+    }
+  }
+}
