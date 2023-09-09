@@ -180,9 +180,6 @@ header {
 .main-cm, .header-cm, .footer-cm {
   padding: 20px; }
 
-.main-cm {
-  background-color: #748cab; }
-
 .grid-container {
   background-color: #3e5c76;
   display: grid;
