@@ -7,7 +7,7 @@ header {
 
   nav {
     @include flex(flex, space-between, center);
-    height: 150px;
+    height: 120px;
 
     > a {
       display: flex;
@@ -17,7 +17,7 @@ header {
 
       img {
         margin-left: 100px;
-        height: 150px;
+        height: 100px;
         transition: transform 0.3s ease; 
       }
 

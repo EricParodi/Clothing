@@ -14,7 +14,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 150px; }
+    height: 120px; }
     header nav > a {
       display: flex;
       align-items: center;
@@ -22,7 +22,7 @@ header {
       transition: transform 0.3s ease; }
       header nav > a img {
         margin-left: 100px;
-        height: 150px;
+        height: 100px;
         transition: transform 0.3s ease; }
       header nav > a:hover {
         transform: scale(1.05); }
@@ -44,20 +44,14 @@ header {
 
 /*hero section*/
 .hero-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url(../img/hero-img.png);
-  height: 400px;
-  text-align: center;
-  font-size: 50px;
-  font-family: 'Playfair Display', serif;
-  color: #000000; }
+  width: 100%;
+  margin-top: -20px;
+  margin-bottom: 20px; }
 
 /* Section Ofertas */
 .ofertas {
   background-color: #748cab;
-  height: 600px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,8 +66,8 @@ header {
     width: 100%; }
   .ofertas div {
     border: 1px solid black;
-    width: 300px;
-    height: 425px;
+    width: 450px;
+    height: 700px;
     text-align: center;
     background-color: #fcfcfc;
     color: black;
@@ -82,38 +76,47 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    transition: transform 0.3s, box-shadow 0.3s; }
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; }
     .ofertas div img {
-      height: 300px;
-      transition: transform 0.3s; }
+      max-height: 500px;
+      width: 300; }
     .ofertas div h3 {
       margin-top: 20px;
       background-color: #748cab;
       margin-top: 0;
       height: 50px;
       padding-top: 10px;
-      width: 100%; }
-    .ofertas div a {
+      width: 25%; }
+    .ofertas div .precio {
+      font-size: 20px;
+      color: #333;
+      margin-top: 10px; }
+    .ofertas div .descripcion {
+      font-size: 16px;
+      color: #777;
+      padding: 0 20px;
+      margin-top: 10px;
+      flex-grow: 1; }
+    .ofertas div .boton-compra {
       text-decoration: none;
       color: #fff;
       background-color: #0d1321;
-      font-size: 30px;
+      font-size: 24px;
       font-weight: bolder;
-      padding: 10px;
-      margin: 5px;
+      padding: 10px 20px;
+      margin: 10px;
       border-radius: 4px; }
-      .ofertas div a:hover {
-        background-color: #748cab; }
+      .ofertas div .boton-compra:hover {
+        background-color: #3e5c76; }
     .ofertas div:hover {
       transform: translateY(-20px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); }
-      .ofertas div:hover img {
-        transform: scale(1.1); }
 
 /* Section mas-vendido */
 .mas-vendido {
   background-color: #748cab;
-  height: 600px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,8 +131,8 @@ header {
     width: 100%; }
   .mas-vendido div {
     border: 1px solid black;
-    width: 300px;
-    height: 425px;
+    width: 450px;
+    height: 700px;
     text-align: center;
     background-color: #fcfcfc;
     color: black;
@@ -138,35 +141,44 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    transition: transform 0.3s, box-shadow 0.3s; }
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; }
     .mas-vendido div img {
-      height: 300px;
-      transition: transform 0.3s; }
+      max-height: 500px;
+      width: 300; }
     .mas-vendido div h3 {
       margin-top: 20px;
       background-color: #748cab;
       margin-top: 0;
       height: 50px;
       padding-top: 10px;
-      width: 100%; }
-    .mas-vendido div a {
+      width: 25%; }
+    .mas-vendido div .precio {
+      font-size: 20px;
+      color: #333;
+      margin-top: 10px; }
+    .mas-vendido div .descripcion {
+      font-size: 16px;
+      color: #777;
+      padding: 0 20px;
+      margin-top: 10px;
+      flex-grow: 1; }
+    .mas-vendido div .boton-compra {
       text-decoration: none;
       color: #fff;
       background-color: #0d1321;
-      font-size: 30px;
+      font-size: 24px;
       font-weight: bolder;
-      padding: 10px;
-      border-radius: 4px;
-      margin: 5px; }
-      .mas-vendido div a:hover {
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 4px; }
+      .mas-vendido div .boton-compra:hover {
         background-color: #3e5c76; }
     .mas-vendido div:hover {
       transform: translateY(-20px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); }
-      .mas-vendido div:hover img {
-        transform: scale(1.1); }
 
-/* Productos Masculinos */
+/* Productos Masculinos y Femeninos */
 .main-cm, .header-cm, .footer-cm {
   padding: 20px; }
 
@@ -180,7 +192,7 @@ header {
   margin: 0;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-  grid-template-rows: 1fr; }
+  grid-template-rows: auto; }
   .grid-container .producto {
     background-color: #fff;
     border-radius: 8px;
@@ -188,17 +200,25 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     text-align: center;
     box-shadow: 0 2px 4px;
     transition: transform 0.3s ease, box-shadow 0.3s ease; }
     .grid-container .producto h3 {
       background-color: #748cab;
       padding: 10px;
-      transition: background-color 0.3s ease; }
+      transition: background-color 0.3s ease;
+      margin-bottom: 10px; }
     .grid-container .producto img {
-      height: 300px;
-      transition: transform 0.3s ease; }
+      height: auto;
+      max-width: 100%; }
+    .grid-container .producto .descripcion {
+      font-size: 16px;
+      color: #777;
+      margin-top: 10px; }
+    .grid-container .producto .precio {
+      font-size: 20px;
+      color: #333;
+      margin-top: 10px; }
     .grid-container .producto .boton-compra {
       margin-top: 20px;
       background-color: #0d1321;
@@ -212,57 +232,6 @@ header {
     .grid-container .producto:hover {
       transform: scale(1.05);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
-    .grid-container .producto:hover img {
-      transform: scale(1.1); }
-
-/* Productos Femeninos */
-.main-cm, .header-cm, .footer-cm {
-  padding: 20px; }
-
-.main-cm {
-  background-color: #748cab; }
-
-.grid-container {
-  background-color: #3e5c76;
-  display: grid;
-  width: 100%;
-  margin: 0;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  grid-template-rows: 1fr; }
-  .grid-container .producto {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    box-shadow: 0 2px 4px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .grid-container .producto h3 {
-      background-color: #748cab;
-      padding: 10px;
-      transition: background-color 0.3s ease; }
-    .grid-container .producto img {
-      height: 300px;
-      transition: transform 0.3s ease; }
-    .grid-container .producto .boton-compra {
-      margin-top: 20px;
-      background-color: #0d1321;
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 4px;
-      transition: background-color 0.3s ease; }
-      .grid-container .producto .boton-compra:hover {
-        background-color: #3e5c76; }
-    .grid-container .producto:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
-    .grid-container .producto:hover img {
-      transform: scale(1.1); }
 
 /* CONOCENOS */
 .conocenos-main, .visitanos-main {
@@ -288,7 +257,7 @@ header {
   background-color: #748cab;
   font-size: 18px; }
   .contactanos-body .contenedor-contactanos {
-    width: 80%;
+    width: 90%;
     margin: 50px auto; }
     .contactanos-body .contenedor-contactanos h1 {
       margin-bottom: 10px; }
@@ -296,6 +265,7 @@ header {
       margin-bottom: 50px; }
   .contactanos-body .contacto {
     background: #fff;
+    height: 500px;
     display: flex; }
     .contactanos-body .contacto .contacto-izq {
       flex-basis: 60%;
@@ -332,27 +302,27 @@ header {
           border-bottom: 1px solid #ccc;
           outline: none;
           padding-bottom: 5px; }
-        .contactanos-body .contacto .input .input-types textarea {
-          width: 100%;
-          border: 1px solid #ccc;
-          outline: none;
-          padding: 10px;
-          box-sizing: border-box; }
-        .contactanos-body .contacto .input .input-types label {
-          margin-bottom: 6px;
-          display: block;
-          color: #0d1321; }
-        .contactanos-body .contacto .input .input-types .boton-contacto {
-          background: #0d1321;
-          width: 100px;
-          border: none;
-          outline: none;
-          color: #fff;
-          height: 35px;
-          border-radius: 30px;
-          margin-top: 20px; }
-          .contactanos-body .contacto .input .input-types .boton-contacto:hover {
-            background-color: #748cab; }
+    .contactanos-body .contacto textarea {
+      width: 100%;
+      border: 1px solid #ccc;
+      outline: none;
+      padding: 10px;
+      box-sizing: border-box; }
+    .contactanos-body .contacto label {
+      margin-bottom: 6px;
+      display: block;
+      color: #0d1321; }
+    .contactanos-body .contacto .boton-contacto {
+      background: #0d1321;
+      width: 100px;
+      border: none;
+      outline: none;
+      color: #fff;
+      height: 35px;
+      border-radius: 30px;
+      margin-top: 20px; }
+      .contactanos-body .contacto .boton-contacto:hover {
+        background-color: #748cab; }
 
 /* FOOTER */
 .footer {
@@ -363,26 +333,17 @@ header {
   padding: 20px;
   flex-wrap: wrap; }
   .footer .footer-img img {
+    height: 150px;
+    transition: transform 0.3s; }
+  .footer .social-icons img {
     height: 100px;
-    transition: transform 0.3s, box-shadow 0.3s; }
-    .footer .footer-img img:hover {
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-      transform: scale(1.1); }
-  .footer .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-left: auto; }
-    .footer .social-icons a {
-      margin-right: 10px; }
-      .footer .social-icons a img {
-        height: 90px;
-        transition: transform 0.3s, box-shadow 0.3s; }
-      .footer .social-icons a:hover {
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        transform: scale(1.1); }
+    margin: 10px;
+    transition: transform 0.3s; }
+  .footer .footer-img img:hover,
+  .footer .social-icons img:hover {
+    transform: scale(1.2); }
   .footer h4 {
-    color: #fff; }
+    color: #748cab; }
 
 /* MEDIA QUERIES */
 @media (max-width: 975px) {
